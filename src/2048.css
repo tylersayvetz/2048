@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+
+  color: rgb(245, 197, 109);
+}
+
+.board {
+  border-radius: 4px;
+}
+.row {
+  display: flex;
+}
+
+.cell {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(204, 192, 178);
+  border: thick solid rgb(175, 164, 152);
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+
