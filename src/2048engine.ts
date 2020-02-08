@@ -8,11 +8,13 @@ export default class Engine {
   width: number;
   height: number;
   board: Array<number | null>;
+  score: number;
 
   constructor(width: number, height: number) {
     this.height = height;
     this.width = width;
     this.board = (new Array(16)).fill(null);
+    this.score = 0;
 
     // here is a seed, if needed.
     // this.board = [2, 2, 2048, 2, null, 2, 256, 8, 1024, 8, 512, 64, 16, 32, 64, 128]
@@ -27,6 +29,10 @@ export default class Engine {
 
   clearBoard(): Array<null> {
     return (new Array(16)).fill(null);
+  }
+
+  getScore():number {
+    return this.score;
   }
 
 
@@ -141,6 +147,11 @@ export default class Engine {
   40: down
 */
   playerMove(key: number) {
+
+    //update the score
+    this.score = this.board.reduce((acc: number, cell: CellContent) => {
+      return acc += cell || 0;
+    }, 0)
 
     //make a 2D board, horizontally oriented.
     let horizontalBoard: TwoDBoard = [];
