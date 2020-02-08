@@ -12,6 +12,7 @@ interface GameProps {
 export default function Twenty48(props: GameProps) {
   
   const [board, setBoard] = useState(engine.getBoard());
+  const [score, setScore] = useState(engine.getScore());
 
   function handleKeyDown(ev: KeyboardEvent) {
     const code = ev.keyCode;
@@ -21,6 +22,7 @@ export default function Twenty48(props: GameProps) {
       //move the pieces and then set the board state.
       engine.playerMove(code);
       setBoard(engine.getBoard());
+      setScore(engine.getScore());
       console.log('Board to Front End', engine.getBoard());
     }
   }
@@ -47,6 +49,7 @@ export default function Twenty48(props: GameProps) {
     <div 
     className='board' 
     >
+      <div className='header'>Score: {score}</div>
       { rows.map((row, i) => {
         return <div key={i} className='row'>{row}</div>
       }) }
