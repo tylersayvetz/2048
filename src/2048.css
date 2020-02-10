@@ -5,8 +5,13 @@
 }
 
 .board {
-
+  position: relative;
 }
+
+.header {
+  margin: 10px;
+}
+
 .row {
   display: flex;
 }
@@ -22,9 +27,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
+.gameover {
+  filter: brightness(0.4);
+}
+
+.game-over-message {
+  color: rgb(255, 190, 71);
+  font-size: 50px;
+  font-weight: lighter;
+  z-index: 2;
+  position: absolute;
+  left: 85px;
+  top: calc( 50% - 20px);
+  background-color: hsla(36, 58%, 17%, 0.671);
+  padding: 10px;
+}
 
 
