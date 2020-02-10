@@ -9,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Use the Arrow Keys to Play!</h1>
+        <h1>2048</h1>
+        <h3>Arrow keys to play.</h3>
         <Twenty48/>
+        <a id='github-link' href="https://github.com/tylersayvetz/2048">GitHub</a>
       </header>
     </div>
   );
