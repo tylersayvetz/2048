@@ -19,7 +19,7 @@ export default class Engine {
     this.gameStatus = null;
 
     // here is a seed, if needed.
-    this.board = [2, 2, 2048, 2, null, 2, 256, 8, 1024, 8, 512, 64, 16, 32, 64, 128]
+    // this.board = [2, 2, 2048, 2, null, 2, 256, 8, 1024, 8, 512, 64, 16, 32, 64, 128]
     // this.board = [2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
   }
