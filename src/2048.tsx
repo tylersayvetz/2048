@@ -5,7 +5,7 @@ import Engine from './2048engine';
 import classNames from 'classnames';
 
 const engine = new Engine(4, 4);
-// engine.seedBoard(2);
+engine.seedBoard(2);
 
 interface GameProps {
 }
