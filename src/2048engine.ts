@@ -132,7 +132,7 @@ export default class Engine {
   horizontal2Dto1D(horiz: TwoDBoard): Board {
     let oneD: Board = [];
     horiz.forEach(sub => {
-      console.log(sub);
+      // console.log(sub);
       oneD = oneD.concat(sub)
     })
     return oneD

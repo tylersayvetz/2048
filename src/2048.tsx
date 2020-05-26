@@ -17,13 +17,13 @@ export default function Twenty48(props: GameProps) {
   function handleKeyDown(ev: KeyboardEvent) {
     const code = ev.keyCode;
     if (code >= 37 && code <= 40) {
-      console.log(code);
+      // console.log(code);
       //do some shit!
       //move the pieces and then set the board state.
       engine.playerMove(code);
       setBoard(engine.getBoard());
       setScore(engine.getScore());
-      console.log('Board to Front End', engine.getBoard());
+      // console.log('Board to Front End', engine.getBoard());
     }
   }
   
